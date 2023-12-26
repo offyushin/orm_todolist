@@ -35,6 +35,11 @@ class _ListScreenState extends State<ListScreen> {
 
                     setState(() {});
                   },
+                  onDelete: (todo) async {
+                    await todo.delete();
+
+                    setState(() {});
+                  },
                 ))
             .toList(),
       ),
