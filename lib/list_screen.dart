@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:orm_todolist/todo.dart';
 
 class ListScreen extends StatefulWidget {
@@ -45,7 +46,8 @@ class _ListScreenState extends State<ListScreen> {
             .toList(),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => context.go('/create_screen'),
+
         child: const Icon(Icons.add),
       ),
     );
