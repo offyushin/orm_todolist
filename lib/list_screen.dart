@@ -18,7 +18,12 @@ class _ListScreenState extends State<ListScreen> {
       title: 'titl1',
       dateTime: 12321,
     ),
+    Todo(
+      title: '가나다라뿅',
+      dateTime: 123123214,
+    ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,9 +39,10 @@ class _ListScreenState extends State<ListScreen> {
       body: ListView(
         children: todos
             .map((todo) => ListTile(
-          title: Text(todo.title),
-          subtitle: Text('${todo.dateTime}'),
-        )).toList(),
+                  title: Text(todo.title),
+                  subtitle: Text('${todo.dateTime}'),
+                ))
+            .toList(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
