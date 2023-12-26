@@ -8,6 +8,12 @@ class ListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Todo 리스트'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.done),
+          )
+        ],
       ),
       body: ListView(
         children: const [
